@@ -18,17 +18,25 @@ public class YatzyEvaluatorTest {
 
     @org.junit.Test
     public void isFourOfAKind() {
-        int [] roll = {1,3,3,3,3};
+        int [] roll = {1,2,3,4,5};
         boolean isFourofAKind=YatzyEvaluator.isFourOfAKind(roll);
+        assertFalse(isFourofAKind);
+
+        int [] roll2 = {1,3,3,3,3};
+         isFourofAKind=YatzyEvaluator.isFourOfAKind(roll2);
         assertTrue(isFourofAKind);
 
-        int [] roll2 = {1,2,3,4,5};
-        isFourofAKind=YatzyEvaluator.isFourOfAKind(roll2);
-        assertFalse(isFourofAKind);
+
     }
 
     @org.junit.Test
     public void isThreeofAKind() {
-        assertTrue("true",false);
+        int [] roll = {1,2,3,4,5};
+        boolean isThreeofAKind=YatzyEvaluator.isThreeofAKind(roll);
+        assertFalse(isThreeofAKind);
+
+        int [] roll2 = {3,1,1,3,3};
+        isThreeofAKind=YatzyEvaluator.isThreeofAKind(roll2);
+        assertTrue(isThreeofAKind);
     }
 }
